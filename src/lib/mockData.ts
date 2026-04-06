@@ -64,7 +64,7 @@ export const predictions: Prediction[] = [
     slug: 'pieter-levels-100m',
     question: 'Will Pieter Levels\' combined revenue exceed $100M ARR by Dec 31, 2027?',
     founder_name: 'Pieter Levels',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1589756412078555136/YlXMBzhp_400x400.jpg',
+    founder_photo_url: pieterImg,
     company_name: 'Nomad List / Photo AI',
     description: 'Pieter Levels is the legendary indie hacker behind Nomad List, Remote OK, and Photo AI.',
     yes_pool: 800,
