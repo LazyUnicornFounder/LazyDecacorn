@@ -1,3 +1,9 @@
+import pieterImg from '@/assets/founders/pieter-levels.jpg';
+import tonyImg from '@/assets/founders/tony-dinh.jpg';
+import marcImg from '@/assets/founders/marc-lou.png';
+import danielImg from '@/assets/founders/daniel-vassallo.jpg';
+import justinImg from '@/assets/founders/justin-welsh.jpg';
+import damonImg from '@/assets/founders/damon-chen.jpg';
 import theBigOneImg from '@/assets/the-big-one.png';
 import theLongGameImg from '@/assets/the-long-game.png';
 import unicornRaceImg from '@/assets/unicorn-race.png';
@@ -58,7 +64,7 @@ export const predictions: Prediction[] = [
     slug: 'pieter-levels-100m',
     question: 'Will Pieter Levels\' combined revenue exceed $100M ARR by Dec 31, 2027?',
     founder_name: 'Pieter Levels',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1589756412078555136/YlXMBzhp_400x400.jpg',
+    founder_photo_url: pieterImg,
     company_name: 'Nomad List / Photo AI',
     description: 'Pieter Levels is the legendary indie hacker behind Nomad List, Remote OK, and Photo AI.',
     yes_pool: 800,
@@ -75,7 +81,7 @@ export const predictions: Prediction[] = [
     slug: 'tony-dinh-10m',
     question: 'Will Tony Dinh reach $10M ARR by Dec 31, 2027?',
     founder_name: 'Tony Dinh',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1674466660231483392/bCk_Skbx_400x400.jpg',
+    founder_photo_url: tonyImg,
     company_name: 'TypingMind / BlackMagic.so',
     description: 'Tony Dinh builds profitable SaaS products as a solo founder.',
     yes_pool: 1100,
@@ -92,7 +98,7 @@ export const predictions: Prediction[] = [
     slug: 'marc-lou-5m',
     question: 'Will Marc Lou exceed $5M ARR by Dec 31, 2026?',
     founder_name: 'Marc Lou',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDjA_400x400.jpg',
+    founder_photo_url: marcImg,
     company_name: 'ShipFast',
     description: 'Marc Lou is the king of shipping fast. Known for building and launching products at lightning speed.',
     yes_pool: 950,
@@ -109,7 +115,7 @@ export const predictions: Prediction[] = [
     slug: 'daniel-vassallo-5m',
     question: 'Will Daniel Vassallo\'s portfolio exceed $5M ARR by Dec 31, 2027?',
     founder_name: 'Daniel Vassallo',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1378735248793837568/k_5wUoRG_400x400.jpg',
+    founder_photo_url: danielImg,
     company_name: 'Small Bets',
     description: 'Daniel left Amazon to build a portfolio of small bets. Can the strategy hit $5M ARR?',
     yes_pool: 1300,
@@ -126,7 +132,7 @@ export const predictions: Prediction[] = [
     slug: 'justin-welsh-10m',
     question: 'Will Justin Welsh exceed $10M annual revenue by Dec 31, 2027?',
     founder_name: 'Justin Welsh',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1594508788895498241/mUi5Lg_t_400x400.jpg',
+    founder_photo_url: justinImg,
     company_name: 'The Saturday Solopreneur',
     description: 'Justin Welsh built a one-person media empire. Can he cross $10M?',
     yes_pool: 750,
@@ -143,7 +149,7 @@ export const predictions: Prediction[] = [
     slug: 'damon-chen-testimonial-10m',
     question: 'Will Testimonial.to reach $10M ARR by Dec 31, 2027?',
     founder_name: 'Damon Chen',
-    founder_photo_url: 'https://pbs.twimg.com/profile_images/1673050243191934976/2sfmNtRT_400x400.jpg',
+    founder_photo_url: damonImg,
     company_name: 'Testimonial.to',
     description: 'Damon Chen\'s Testimonial.to helps businesses collect and showcase testimonials.',
     yes_pool: 1200,
