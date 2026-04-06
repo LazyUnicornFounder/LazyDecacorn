@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          email: string | null
+          id: string
+          level: number
+          oracles_balance: number
+          polar_customer_id: string | null
+          polar_subscription_id: string | null
+          streak_days: number
+          subscription_tier: string
+          updated_at: string
+          xp: number
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id: string
+          level?: number
+          oracles_balance?: number
+          polar_customer_id?: string | null
+          polar_subscription_id?: string | null
+          streak_days?: number
+          subscription_tier?: string
+          updated_at?: string
+          xp?: number
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          level?: number
+          oracles_balance?: number
+          polar_customer_id?: string | null
+          polar_subscription_id?: string | null
+          streak_days?: number
+          subscription_tier?: string
+          updated_at?: string
+          xp?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
