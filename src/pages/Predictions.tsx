@@ -23,6 +23,12 @@ const PredictionsPage = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
+        {/* Headline */}
+        <h1 className="font-display text-2xl sm:text-3xl font-bold mb-6 max-w-2xl">
+          The prediction game for solo founders on their way to building{" "}
+          <span className="text-gradient-primary">$10 billion decacorns</span>, and beyond.
+        </h1>
+
         {/* Search */}
         <div className="mb-4">
           <input
