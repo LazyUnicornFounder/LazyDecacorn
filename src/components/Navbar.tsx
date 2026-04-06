@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import OracleIcon from "./OracleIcon";
+import { useAuth } from "@/contexts/AuthContext";
 
 const navLinks = [
   { to: "/landing#how-to-play", label: "How It Works" },
@@ -9,6 +10,7 @@ const navLinks = [
 
 const Navbar = () => {
   const location = useLocation();
+  const { user, profile, signInWithGoogle, signOut, loading } = useAuth();
 
   return (
     <nav className="sticky top-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
@@ -46,19 +48,44 @@ const Navbar = () => {
               🎮 PLAY MONEY GAME
             </div>
 
-            {/* Oracles balance */}
-            <div className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1.5">
-              <OracleIcon className="w-4 h-4" />
-              <span className="font-bold text-sm text-primary">₽1,000</span>
-            </div>
+            {user && profile ? (
+              <>
+                {/* Oracles balance */}
+                <div className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1.5">
+                  <OracleIcon className="w-4 h-4" />
+                  <span className="font-bold text-sm text-primary">
+                    ₽{profile.oracles_balance.toLocaleString()}
+                  </span>
+                </div>
 
-            {/* Play Free CTA */}
-            <Link
-              to="/predict"
-              className="btn-game btn-primary-game text-sm px-5 py-2"
-            >
-              Play Free
-            </Link>
+                {/* Profile link */}
+                <Link to="/profile" className="flex items-center gap-2">
+                  {profile.avatar_url ? (
+                    <img src={profile.avatar_url} alt="" className="w-8 h-8 rounded-full ring-2 ring-primary/20" />
+                  ) : (
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm">
+                      🔮
+                    </div>
+                  )}
+                </Link>
+
+                {/* Sign out */}
+                <button
+                  onClick={signOut}
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={signInWithGoogle}
+                disabled={loading}
+                className="btn-game btn-primary-game text-sm px-5 py-2"
+              >
+                Continue with Google
+              </button>
+            )}
           </div>
         </div>
       </div>
