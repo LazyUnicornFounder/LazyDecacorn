@@ -1,3 +1,8 @@
+import theBigOneImg from '@/assets/the-big-one.png';
+import theLongGameImg from '@/assets/the-long-game.png';
+import unicornRaceImg from '@/assets/unicorn-race.png';
+import aiWildCardImg from '@/assets/ai-wild-card.png';
+
 export interface Prediction {
   id: string;
   slug: string;
