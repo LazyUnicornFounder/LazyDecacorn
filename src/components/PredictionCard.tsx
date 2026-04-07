@@ -1,43 +1,54 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import type { Prediction } from "@/lib/mockData";
 
-const PredictionCard = ({ prediction, index = 0 }: { prediction: Prediction; index?: number }) => {
+const categoryMessages: Record<string, { emoji: string; headline: string; subtext: string }> = {
+  "MRR Race": {
+    emoji: "💰",
+    headline: "Join the MRR Race",
+    subtext: "Predict which founders will hit their revenue milestones first",
+  },
+  "Unicorn Race": {
+    emoji: "🦄",
+    headline: "Join the Unicorn Race",
+    subtext: "Bet on who reaches $1B valuation — solo founder style",
+  },
+  "Decacorn Race": {
+    emoji: "🚀",
+    headline: "Join the Decacorn Race",
+    subtext: "Can a solo founder build a $10B company? Place your prediction",
+  },
+  "Y Combinator Race": {
+    emoji: "🏁",
+    headline: "Join the YC Race",
+    subtext: "Predict which YC-backed solo founders will break out",
+  },
+  "Results": {
+    emoji: "📊",
+    headline: "See the Results",
+    subtext: "Check how past predictions played out",
+  },
+};
+
+const fallback = {
+  emoji: "🔮",
+  headline: "Join This Race",
+  subtext: "Sign up and start making predictions",
+};
+
+const PredictionCard = ({ category, index = 0 }: { category: string; index?: number }) => {
+  const msg = categoryMessages[category] || fallback;
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.4 }}
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -4, borderColor: "hsl(var(--primary))" }}
+      className="border-2 border-dashed border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3 min-h-[180px] cursor-pointer hover:border-primary/50 transition-colors"
     >
-      <Link to={`/predict/${prediction.slug}`} className="block card-game p-5 h-full">
-        {/* Header */}
-        <div className="flex items-start gap-3 mb-4">
-          {prediction.founder_photo_url ? (
-            <img
-              src={prediction.founder_photo_url}
-              alt={prediction.founder_name}
-              className="w-12 h-12 rounded-2xl object-cover ring-2 ring-primary/20"
-            />
-          ) : (
-            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-xl">
-              🔮
-            </div>
-          )}
-          <div className="flex-1 min-w-0">
-            <p className="font-bold text-sm truncate">{prediction.founder_name}</p>
-            <p className="text-xs text-muted-foreground">{prediction.company_name}</p>
-          </div>
-          <span className="game-badge text-[10px]">{prediction.category}</span>
-        </div>
-
-        {/* Question */}
-        <h3 className="font-display font-semibold text-sm leading-snug mb-4 line-clamp-2">
-          {prediction.question}
-        </h3>
-
-      </Link>
+      <span className="text-3xl">{msg.emoji}</span>
+      <h3 className="font-display font-bold text-base text-foreground">{msg.headline}</h3>
+      <p className="text-sm text-muted-foreground max-w-[220px]">{msg.subtext}</p>
+      <span className="text-xs font-semibold text-primary mt-1">Coming Soon →</span>
     </motion.div>
   );
 };
