@@ -1,10 +1,20 @@
 import { motion } from "framer-motion";
 
 const categoryMessages: Record<string, { emoji: string; headline: string; subtext: string }> = {
+  "Ramen Profitable Race": {
+    emoji: "🍜",
+    headline: "Join the Ramen Race",
+    subtext: "Predict which founders hit their first $1K–$5K MRR and escape survival mode",
+  },
   "MRR Race": {
     emoji: "💰",
     headline: "Join the MRR Race",
     subtext: "Predict which founders will hit their revenue milestones first",
+  },
+  "$100M ARR Race": {
+    emoji: "💎",
+    headline: "Join the $100M ARR Race",
+    subtext: "Who will be the first solo founder to cross $100M in annual recurring revenue?",
   },
   "Unicorn Race": {
     emoji: "🦄",
@@ -15,6 +25,16 @@ const categoryMessages: Record<string, { emoji: string; headline: string; subtex
     emoji: "🚀",
     headline: "Join the Decacorn Race",
     subtext: "Can a solo founder build a $10B company? Place your prediction",
+  },
+  "IPO Race": {
+    emoji: "🔔",
+    headline: "Join the IPO Race",
+    subtext: "Which solo founder will ring the bell first? Predict who goes public",
+  },
+  "Acquisition Race": {
+    emoji: "🤝",
+    headline: "Join the Acquisition Race",
+    subtext: "Predict which founders get acquired — and for how much",
   },
   "Y Combinator Race": {
     emoji: "🏁",
