@@ -82,6 +82,13 @@ const PredictionsPage = () => {
                   </div>
                 </div>
               </div>
+
+              <div>
+                <p className="font-semibold text-foreground mb-2">🏆 Prizes</p>
+                <div className="flex flex-col gap-2 text-sm">
+                  <p>Win predictions and earn Decacorns (₽). Top predictors each season win exclusive Power-Ups, badges, and leaderboard glory. The better your calls, the bigger your rewards.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
