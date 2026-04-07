@@ -100,7 +100,7 @@ const PredictionsPage = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((p, i) => (
-            <PredictionCard key={p.id} prediction={p} index={i} />
+            <PredictionCard key={p.id} category={p.category} index={i} />
           ))}
         </div>
 
