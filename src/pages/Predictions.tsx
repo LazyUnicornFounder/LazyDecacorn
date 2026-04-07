@@ -11,7 +11,7 @@ const PredictionsPage = () => {
 
   const filtered = predictions.filter((p) => {
     const matchCat = activeCategory === "All" || p.category === activeCategory ||
-      (activeCategory === "Resolved" && p.status !== "open");
+      (activeCategory === "Results" && p.status !== "open");
     const matchSearch = p.founder_name.toLowerCase().includes(search.toLowerCase()) ||
       p.question.toLowerCase().includes(search.toLowerCase());
     return matchCat && matchSearch;
