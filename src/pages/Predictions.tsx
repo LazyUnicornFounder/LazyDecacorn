@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import GameFooter from "@/components/GameFooter";
+import OpenSourceBanner from "@/components/OpenSourceBanner";
 import PredictionCard from "@/components/PredictionCard";
 import Leaderbox from "@/components/Leaderbox";
 import { usePredictions } from "@/hooks/usePredictions";
@@ -144,6 +145,7 @@ const PredictionsPage = () => {
         )}
       </div>
 
+      <OpenSourceBanner />
       <GameFooter />
     </div>
   );
